@@ -5,15 +5,12 @@ import 'package:get/get.dart';
 import 'package:weatherilla/constant.dart';
 import 'package:geolocator/geolocator.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-
+  Future<Position> getLatong() async {
+    return ;
+  }
   
   @override
   Widget build(BuildContext context) {
@@ -61,9 +58,13 @@ class _HomePageState extends State<HomePage> {
                 ),
                 onPressed: () async {
                   _permission = await Geolocator.checkPermission();
+                  
+                  
                   if (_permission == LocationPermission.denied) {
                     await Geolocator.requestPermission();
+                    
                   }
+                  
               },
               ),
               ),

@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                     decoration: BoxDecoration(
                       color: mainColor,
-                      borderRadius: BorderRadius.circular(30)
+                      borderRadius: BorderRadius.circular(30),
                     ),
                   ),
                 ),
@@ -63,7 +63,6 @@ class _HomePageState extends State<HomePage> {
                   _permission = await Geolocator.checkPermission();
                   if (_permission == LocationPermission.denied) {
                     await Geolocator.requestPermission();
-                    
                   }
               },
               ),

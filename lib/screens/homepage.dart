@@ -88,6 +88,7 @@ class HomePage extends StatelessWidget {
               Expanded(flex: 11,child: locationImage),
           ],
         ),
+        
       ),
     );
   }
